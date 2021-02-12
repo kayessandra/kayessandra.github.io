@@ -1,4 +1,3 @@
-// const deploy = require('gulp-gh-pages');
 const gulp = require('gulp');
 const sass = require('gulp-dart-sass');
 const browsersync = require("browser-sync").create();
@@ -9,11 +8,6 @@ function css() {
     .pipe(gulp.dest('app/css'))
     .pipe(browsersync.stream());
 }
-
-// function deploy() {
-// 	return gulp.src("./app/**/*")
-//     .pipe(deploy())
-// }
 
 function watch() {
 	browsersync.init({

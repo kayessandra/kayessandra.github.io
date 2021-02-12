@@ -1,0 +1,37 @@
+// sitehead
+
+#site-header {
+	padding: 30px 50px;
+	width: 100%;
+
+	.main-nav {
+		img { width: 105px; }
+	}
+
+	.nav-link {
+		width: 50%;
+		right: 100px;
+		top: 35px;
+		text-align: right;
+
+		a { padding: 0px 20px; }
+	}
+
+
+	// mobile
+	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+		padding: 25px 20px;
+		width: 100%;
+
+		.nav-link {
+			width: 30%;
+			right: 20px;
+			padding-top: 10px;
+
+			a {
+				display: block;
+				padding: 10px 0px;
+			}
+		}
+	}
+}

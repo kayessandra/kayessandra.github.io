@@ -1,0 +1,44 @@
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,.h1 { font-size: 2.488em; }
+h2,.h2 { font-size: 2.074em; }
+h3,.h3 { font-size: 1.728em; }
+h4,.h4 { font-size: 1.44em; }
+h5,.h5 { font-size: 1.2em; }
+
+p {
+    margin: 0px;
+    font-size: 1em;
+
+    &.small { font-size: 0.8em; }
+    &.bold { font-weight: bold; }
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+
+    &.dark {
+    	color: #222222;
+
+    	&:hover {
+    		color: #666666;
+    	}
+    }
+
+    &.underline { text-decoration: underline; }
+
+    &.padding { padding: 7px 14px 8px 14px; }
+}
+
+.uppercase { text-transform: uppercase; }
+
+.material-icons {
+	font-size: 1em;
+	color: #222222;
+}
