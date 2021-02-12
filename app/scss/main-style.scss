@@ -6,7 +6,8 @@
 @import 'section/site-head';
 
 // pages
-@import 'pages/home-page';
+@import 'pages/home-page',
+		'pages/results-page';
 
 html {
     -webkit-box-sizing: border-box;

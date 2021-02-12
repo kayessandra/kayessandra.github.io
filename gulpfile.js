@@ -20,7 +20,7 @@ function watch() {
 
 	gulp.watch('app/scss/**/*.scss', css);
 	gulp.watch('**/*.html').on('change', browsersync.reload);
-	// gulp.watch('app/js/**/*.js', browsersync);
+	gulp.watch('app/js/**/*.js', browsersync);
 }
 
 exports.css = css;
