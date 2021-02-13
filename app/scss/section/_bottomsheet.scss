@@ -1,0 +1,35 @@
+// cards
+
+.bottomsheet {
+	background-color: #222222;
+	color: #e7e7e7;
+	padding: 20px;
+	border-radius: 10px 10px 0px 0px;
+	width: 100%;
+	bottom: -800px;
+	transition: all .6s;
+	z-index: 2;
+
+	&.open {
+		bottom: 0px;
+	}
+
+	> div {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px 10px;
+
+	    .chip {
+	        padding: 5px 10px 6px 10px;
+	        border-radius: 5px;
+	        display: inline-block;
+
+	        a:last-of-type { display: none; }
+
+	        &.active {
+	        	background-color: #111111;
+
+	        	a:last-of-type { display: inline-block; }
+	        }
+	    }
+	}
+}

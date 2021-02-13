@@ -1,0 +1,52 @@
+#home #site-header {
+  position: absolute;
+}
+#home #site-header .main-nav {
+  border-bottom: none;
+  background-color: transparent;
+}
+#home .page-content {
+  background-image: url("/app/images/paints/pablo-honey-hero.jpg");
+  width: 100%;
+  height: 100vh;
+}
+#home .page-content .featured-paint-name {
+  top: 45%;
+  padding: 0px 100px;
+}
+#home .page-content .paint-steps {
+  bottom: 0px;
+  width: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#home .page-content .paint-steps .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+#home .page-content .paint-steps div:nth-of-type(2) {
+  border-right: 1px solid #222222;
+  border-left: 1px solid #222222;
+}
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  #home #site-header .menu-icon {
+    display: none;
+  }
+  #home #site-header .nav-link {
+    padding-top: 30px;
+    top: 35px;
+    background-color: transparent;
+    text-align: right;
+  }
+  #home #site-header .nav-link a {
+    display: block;
+    padding: 10px 20px;
+  }
+  #home .page-content .featured-paint-name {
+    padding: 0px 20px;
+    width: 100%;
+  }
+  #home .page-content .paint-steps {
+    width: 100%;
+  }
+}

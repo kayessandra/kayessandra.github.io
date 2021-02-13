@@ -1,0 +1,21 @@
+// sitefooter
+
+#site-footer {
+	border-top: 1px dashed #666666;
+	padding: 30px 50px;
+
+	.links {
+		a { padding: 0px 10px; }
+		
+		img { width: 80px; }
+	}
+
+	// mobile
+	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+		padding: 25px 20px; 
+
+		.links {
+			a { padding: 0px 5px; }
+		}
+	}
+}
