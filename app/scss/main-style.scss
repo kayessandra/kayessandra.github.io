@@ -3,11 +3,10 @@
 		'utilities/helpers';
 
 // sections
-@import 'section/site-head';
-
-// pages
-@import 'pages/home-page',
-		'pages/results-page';
+@import 'section/site-head',
+		'section/site-footer',
+		'section/bottomsheet',
+		'section/cards';
 
 html {
     -webkit-box-sizing: border-box;
@@ -28,6 +27,26 @@ body {
 	font-size: 16px;
 	background-color: ivory;
 	font-family: 'Roboto', sans-serif;
+	min-width: 1000px;
 
 	img { max-width: 100%; }
+
+	.bottomsheet { display: none; }
+
+	.backdrop {
+		background-color: #000000;
+		opacity: 0.8;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+
+		&.hide { display: none; }
+	}
+
+	// mobile
+	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+		min-width: 100px;
+
+		.bottomsheet { display: block; }
+	}
 }

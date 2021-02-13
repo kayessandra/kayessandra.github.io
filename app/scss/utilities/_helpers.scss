@@ -17,6 +17,8 @@
 
 .absolute { position: absolute; }
 
+.fixed { position: fixed; }
+
 // padding
 .padding-top-5 { padding-top: 5px; }
 .padding-bottom-5 { padding-bottom: 5px; }
@@ -48,3 +50,11 @@
 .margin-bottom-20 { margin-bottom: 20px; }
 .margin-left-20 { margin-left: 20px; }
 .margin-right-20 { margin-right: 20px; }
+
+// hr
+
+hr { 
+	border-width: 1px 0px 0px 0px;
+	border-style: dashed;
+	border-color: #666666;
+}

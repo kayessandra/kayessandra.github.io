@@ -46,6 +46,12 @@ a.dark {
 a.dark:hover {
   color: #666666;
 }
+a.light {
+  color: #e7e7e7;
+}
+a.light:hover {
+  color: #cccccc;
+}
 a.underline {
   text-decoration: underline;
 }
@@ -60,6 +66,13 @@ a.padding {
 .material-icons {
   font-size: 1em;
   color: #222222;
+}
+.material-icons.small {
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+.material-icons.light {
+  color: #e7e7e7;
 }
 
 .flex {
@@ -85,6 +98,10 @@ a.padding {
 
 .absolute {
   position: absolute;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .padding-top-5 {
@@ -183,10 +200,25 @@ a.padding {
   margin-right: 20px;
 }
 
+hr {
+  border-width: 1px 0px 0px 0px;
+  border-style: dashed;
+  border-color: #666666;
+}
+
 #site-header {
-  padding: 30px 50px;
   width: 100%;
+  position: sticky;
+  top: 0;
+}
+#site-header .menu-icon {
+  display: none;
+}
+#site-header .main-nav {
   border-bottom: 1px dashed #666666;
+  background-color: ivory;
+  padding: 30px 50px;
+  z-index: 3;
 }
 #site-header .main-nav img {
   width: 105px;
@@ -201,54 +233,93 @@ a.padding {
   padding: 0px 20px;
 }
 @media only screen and (min-width: 300px) and (max-width: 700px) {
-  #site-header {
+  #site-header .main-nav {
     padding: 25px 20px;
-    width: 100%;
+    position: relative;
+  }
+  #site-header .menu-icon {
+    display: inline-block;
   }
   #site-header .nav-link {
-    width: 30%;
-    right: 20px;
-    padding-top: 10px;
+    width: 100%;
+    right: 0px;
+    left: 0px;
+    top: -150px;
+    transition: all 0.5s;
+    background-color: ivory;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    z-index: 2;
   }
   #site-header .nav-link a {
     display: block;
     padding: 10px 0px;
   }
+  #site-header .nav-link.drop {
+    top: 79px;
+  }
 }
 
-#home #site-header {
-  border-bottom: none;
+#site-footer {
+  border-top: 1px dashed #666666;
+  padding: 30px 50px;
 }
-#home .page-content {
-  background-image: url("/app/images/paints/pablo-honey-hero.jpg");
-  width: 100%;
-  height: 100vh;
+#site-footer .links a {
+  padding: 0px 10px;
 }
-#home .page-content .featured-paint-name {
-  top: 45%;
-  padding: 0px 100px;
-}
-#home .page-content .paint-steps {
-  bottom: 0px;
-  width: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-#home .page-content .paint-steps .grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-#home .page-content .paint-steps div:nth-of-type(2) {
-  border-right: 1px solid #222222;
-  border-left: 1px solid #222222;
+#site-footer .links img {
+  width: 80px;
 }
 @media only screen and (min-width: 300px) and (max-width: 700px) {
-  #home .page-content .featured-paint-name {
-    padding: 0px 20px;
-    width: 100%;
+  #site-footer {
+    padding: 25px 20px;
   }
-  #home .page-content .paint-steps {
-    width: 100%;
+  #site-footer .links a {
+    padding: 0px 5px;
+  }
+}
+
+.bottomsheet {
+  background-color: #222222;
+  color: #e7e7e7;
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  bottom: -800px;
+  transition: all 0.6s;
+  z-index: 2;
+}
+.bottomsheet.open {
+  bottom: 0px;
+}
+.bottomsheet > div {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 10px;
+}
+.bottomsheet > div .chip {
+  padding: 5px 10px 6px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.bottomsheet > div .chip a:last-of-type {
+  display: none;
+}
+.bottomsheet > div .chip.active {
+  background-color: #111111;
+}
+.bottomsheet > div .chip.active a:last-of-type {
+  display: inline-block;
+}
+
+.paint-card .image-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+}
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  .paint-card .image-wrapper {
+    height: 70px;
   }
 }
 
@@ -271,7 +342,29 @@ body {
   font-size: 16px;
   background-color: ivory;
   font-family: "Roboto", sans-serif;
+  min-width: 1000px;
 }
 body img {
   max-width: 100%;
+}
+body .bottomsheet {
+  display: none;
+}
+body .backdrop {
+  background-color: #000000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+body .backdrop.hide {
+  display: none;
+}
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  body {
+    min-width: 100px;
+  }
+  body .bottomsheet {
+    display: block;
+  }
 }

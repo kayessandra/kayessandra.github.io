@@ -1,11 +1,18 @@
 // sitehead
 
 #site-header {
-	padding: 30px 50px;
 	width: 100%;
-	border-bottom: 1px dashed #666666;
+	position: sticky;
+	top: 0;
+
+	.menu-icon { display: none; }
 
 	.main-nav {
+		border-bottom: 1px dashed #666666;
+		background-color: ivory;
+		padding: 30px 50px;
+		z-index: 3;
+
 		img { width: 105px; }
 	}
 
@@ -21,18 +28,30 @@
 
 	// mobile
 	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
-		padding: 25px 20px;
-		width: 100%;
+		.main-nav {
+			padding: 25px 20px; 
+			position: relative;
+		}
+
+		.menu-icon { display: inline-block; }
 
 		.nav-link {
-			width: 30%;
-			right: 20px;
-			padding-top: 10px;
+			width: 100%;
+			right: 0px;
+			left: 0px;
+			top: -150px;
+			transition: all .5s;
+			background-color: ivory;
+			text-align: center;
+			padding: 10px 0px 10px 0px;
+			z-index: 2;
 
 			a {
 				display: block;
 				padding: 10px 0px;
 			}
+
+			&.drop { top: 79px; }
 		}
 	}
 }

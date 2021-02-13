@@ -6,6 +6,7 @@
 		<title>PAINTSHOP</title>
 
 		<link rel="stylesheet" href="app/css/main-style.css">
+		<link rel="stylesheet" href="app/css/pages/results-page.css">
 
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -13,24 +14,361 @@
 	</head>
 
 	<body id="results">
-		<header id="site-header" class="absolute">
-			<section class="main-nav flex space-between item-center">
-				<a href="index.html" class="dark"><img src="app/images/black-logo.png" alt=""></a>
-				<a href="" class="dark"><span class="material-icons">shopping_cart</span></a>
-				<a href="" class="dark"><span class="material-icons">menu</span></a>
-			</section>
-
-			<nav class="nav-link absolute">
-				<a href="" class="dark">All Colors</a>
-				<a href="" class="dark">Primer</a>
-				<a href="" class="dark">Product</a>
-				<a href="" class="dark">FAQs</a>
-			</nav>
-		</header>
+		<header id="site-header"></header>
 
 		<section class="page-content">
-			<div id="sample"></div>
+			<h2 class="bold uppercase">All Colors</h2>
+
+			<div class="grid gap">
+				<div class="filter padding-right-20">
+					<h5 class="bold uppercase">Filters</h5>
+
+					<hr>
+
+					<div class="padding-top-20 padding-bottom-20 grid">
+						<div>
+							<span class="chip active flex item-center">
+								<a href="" class="dark">Best Sellers</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Dark</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Light</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="padding-top-20 padding-bottom-20 grid">
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Beige</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Pink</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Black</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Purple</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Blue</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Red</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Gray</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">White</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Green</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Yellow</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+
+						<div>
+							<span class="chip flex item-center">
+								<a href="" class="dark">Orange</a>
+								<a href="" class="dark"><span class="material-icons small">close</span></a>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="items">
+					<div class="flex item-center space-between">
+						<p>50 colors to choose from</p>
+
+						<a href="" class="dark bottomsheet-trigger"><span class="material-icons">filter_alt</span></a>
+					</div>
+
+					<section class="item-wrapper grid">
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/marrakesh-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Marrakesh</p>
+							<p class="small">Warm, earthy pink</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/west-coast-ghost-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">West Coast Ghost</p>
+							<p class="small">Super cool light gray</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/kismet-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Kismet</p>
+							<p class="small">Dark dutch green</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/pablo-honey-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Pablo honey</p>
+							<p class="small">Warm, bright yellow</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/west-coast-ghost-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">West Coast Ghost</p>
+							<p class="small">Super cool light gray</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/pablo-honey-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Pablo honey</p>
+							<p class="small">Warm, bright yellow</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/marrakesh-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Marrakesh</p>
+							<p class="small">Warm, earthy pink</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/kismet-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Kismet</p>
+							<p class="small">Dark dutch green</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/kismet-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Kismet</p>
+							<p class="small">Dark dutch green</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/pablo-honey-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Pablo honey</p>
+							<p class="small">Warm, bright yellow</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/west-coast-ghost-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">West Coast Ghost</p>
+							<p class="small">Super cool light gray</p>
+						</div>
+
+						<div class="paint-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/pablo-honey-hero.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Pablo honey</p>
+							<p class="small">Warm, bright yellow</p>
+						</div>
+					</section>
+
+					<p>Oops, that's all of it...</p>
+				</div>
+			</div>
 		</section>
+
+		<!-- mobile bottomsheet -->
+		<section class="bottomsheet filter fixed">
+			<div class="flex item-center space-between">
+				<h5 class="bold uppercase">Filters</h5>
+
+				<a href="" class="light close"><span class="material-icons light">close</span></a>
+			</div>
+
+			<hr>
+
+			<div class="padding-top-20 padding-bottom-20 grid">
+				<div>
+					<span class="chip active flex item-center">
+						<a href="" class="light">Best Sellers</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Dark</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Light</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="padding-top-20 padding-bottom-20 grid">
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Beige</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Pink</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Black</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Purple</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Blue</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Red</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Gray</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">White</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Green</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Yellow</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+
+				<div>
+					<span class="chip flex item-center">
+						<a href="" class="light">Orange</a>
+						<a href="" class="light"><span class="material-icons small light">close</span></a>
+					</span>
+				</div>
+			</div>
+		</section>
+		<div class="backdrop fixed hide"></div>
+
+		<footer id="site-footer" class="flex item-center space-between"></footer>
 	</body>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
