@@ -1,14 +1,14 @@
-// cards
+// bottomsheet
 
 .bottomsheet {
-	background-color: #222222;
-	color: #e7e7e7;
+	background-color: #212529;
+	color: #CED4DA;
 	padding: 20px;
 	border-radius: 10px 10px 0px 0px;
 	width: 100%;
 	bottom: -800px;
 	transition: all .6s;
-	z-index: 2;
+	z-index: 6;
 
 	&.open {
 		bottom: 0px;
@@ -26,10 +26,16 @@
 	        a:last-of-type { display: none; }
 
 	        &.active {
-	        	background-color: #111111;
+	        	background-color: #343a40;
 
 	        	a:last-of-type { display: inline-block; }
 	        }
 	    }
+	}
+
+	> form {
+		select {
+			color: #FFFFF0;
+		}
 	}
 }

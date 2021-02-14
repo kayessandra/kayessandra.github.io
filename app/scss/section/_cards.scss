@@ -1,15 +1,31 @@
 // cards
 
-.paint-card {
+.paint-card, .mood-card {
 	.image-wrapper {
 		border-radius: 5px;
 		overflow: hidden;
 		width: 100%;
-		height: 100px;
+
+		img { display: block; }
 	}
+
+	p:last-of-type { padding-top: 5px; }
+}
+
+.paint-card {
+	.image-wrapper { height: 100px; }
 
 	// mobile
 	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
 		.image-wrapper { height: 70px; }
+	}
+}
+
+.mood-card {
+	.image-wrapper { height: 200px; }
+
+	// mobile
+	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+		.image-wrapper { height: 150px; }
 	}
 }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<title>PAINTSHOP</title>
+
+		<link rel="stylesheet" href="app/css/main-style.css">
+		<link rel="stylesheet" href="app/css/pages/moods-page.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	</head>
+
+	<body id="moods">
+		<header id="site-header"></header>
+
+		<section class="page-content">
+			<div class="grid">
+				<div class="item-photo-wrapper">
+					<img src="app/images/heros/self-portrait.jpg" alt="">
+				</div>
+
+				<div class="item-details">
+					<h3 class="bold uppercase">Self-portrait</h3>
+					<p>Dark Red</p>
+
+					<div class="oder-item">
+						<hr>
+						<form action="" class="grid gap">
+							<fieldset>
+								<label for="paint-type">Paint Type</label>
+								<select name="paint-type" id="">
+									<option value="0">Select</option>
+									<option value="1">Semi-Gloss</option>
+									<option value="2">Standard</option>
+								</select>
+							</fieldset>
+
+							<fieldset>
+								<label for="paint-type">Quantity</label>
+								<select name="paint-type" id="">
+									<option value="0">1</option>
+									<option value="1">2</option>
+									<option value="2">3</option>
+								</select>
+							</fieldset>
+						</form>
+
+						<button class="get-sample bottomsheet-trigger">Get Sample</button>
+						<button class="add-to-cart bottomsheet-trigger">Add To Cart</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="all-moods">
+				<h2 class="bold uppercase">Moods</h2>
+
+				<div>
+					<h3 class="bold uppercase">Best Sellers</h3>
+
+					<div class="grid padding-top-10">
+						<a href="item.html" class="dark mood-card modal-trigger">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/heros/marrakesh.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Marrakesh</p>
+							<p class="small">Warm, earthy pink</p>
+						</a>
+
+						<div class="mood-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/heros/marrakesh.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Marrakesh</p>
+							<p class="small">Warm, earthy pink</p>
+						</div>
+
+						<div class="mood-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/heros/marrakesh.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Marrakesh</p>
+							<p class="small">Warm, earthy pink</p>
+						</div>
+
+						<div class="mood-card">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/heros/marrakesh.jpg" alt="">
+							</div>
+
+							<p class="h5 bold uppercase">Marrakesh</p>
+							<p class="small">Warm, earthy pink</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- modal -->
+		<section class="modal fixed">
+			<div class="relative">
+				<a href="" class="dark close absolute"><span class="material-icons">close</span></a>
+
+				<div class="modal-image-wrapper">
+					<img src="app/images/heros/marrakesh.jpg" alt="">
+				</div>
+
+				<div class="content absolute">
+					<h4 class="bold uppercase">Marrakesh</h4>
+					<p class="padding-top-5 margin-bottom-20">Warm, earthy pink</p>
+
+					<button>Get Sample</button>
+					<button>Add To Cart</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- mobile bottomsheet -->
+		<section class="bottomsheet filter fixed">
+			<div class="flex item-center space-between">
+				<h5 class="bold uppercase">Get A Sample</h5>
+
+				<a href="" class="light close"><span class="material-icons light">close</span></a>
+			</div>
+
+			<hr>
+
+			<form action="" class="padding-top-20 padding-bottom-20">
+				<h5 class="bold uppercase">Marrakesh</h5>
+				<p>Warm, earthly pink</p>
+
+				<fieldset class="margin-top-20">
+					<label for="paint-type">Paint Type</label>
+					<select name="paint-type" id="">
+						<option value="0">Select</option>
+						<option value="1">Semi-Gloss</option>
+						<option value="2">Standard</option>
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<label for="paint-type">Quantity</label>
+					<select name="paint-type" id="">
+						<option value="0">1</option>
+						<option value="1">2</option>
+						<option value="2">3</option>
+					</select>
+				</fieldset>
+			</form>
+
+			<hr>
+
+			<button class="expand light margin-top-10">Add To Cart</button>
+		</section>
+		<div class="backdrop fixed hide"></div>
+
+		<footer id="site-footer" class="flex item-center space-between"></footer>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="app/js/jquery-include.js"></script>
+</html>

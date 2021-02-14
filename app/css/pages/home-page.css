@@ -25,8 +25,8 @@
   grid-template-columns: repeat(3, 1fr);
 }
 #home .page-content .paint-steps div:nth-of-type(2) {
-  border-right: 1px solid #222222;
-  border-left: 1px solid #222222;
+  border-right: 1px solid #212529;
+  border-left: 1px solid #212529;
 }
 @media only screen and (min-width: 300px) and (max-width: 700px) {
   #home #site-header .menu-icon {
@@ -37,6 +37,7 @@
     top: 35px;
     background-color: transparent;
     text-align: right;
+    border-bottom: none;
   }
   #home #site-header .nav-link a {
     display: block;

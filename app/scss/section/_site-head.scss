@@ -8,8 +8,8 @@
 	.menu-icon { display: none; }
 
 	.main-nav {
-		border-bottom: 1px dashed #666666;
-		background-color: ivory;
+		border-bottom: 1px dashed #495057;
+		background-color: #FFFFF0;
 		padding: 30px 50px;
 		z-index: 3;
 
@@ -28,6 +28,8 @@
 
 	// mobile
 	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+		z-index: 3;
+
 		.main-nav {
 			padding: 25px 20px; 
 			position: relative;
@@ -41,10 +43,11 @@
 			left: 0px;
 			top: -150px;
 			transition: all .5s;
-			background-color: ivory;
+			background-color: #FFFFF0;
 			text-align: center;
 			padding: 10px 0px 10px 0px;
 			z-index: 2;
+			border-bottom: 1px dashed #495057;
 
 			a {
 				display: block;

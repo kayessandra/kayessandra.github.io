@@ -1,0 +1,58 @@
+// modal
+
+.modal {
+	background-color: #212529;
+	color: #CED4DA;
+	padding: 20px;
+	border-radius: 10px;
+	width: 60%;
+	top: 100px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	overflow: hidden;
+	z-index: 6;
+	display: none;
+
+	&.open {
+		display: block;
+	}
+
+	.close {
+		top: 15px;
+		right: 5px;
+	}
+
+	.modal-image-wrapper {
+		margin: -20px;
+		height: 600px;
+	}
+
+	.content {
+		background-color: #FFFFF0;
+		color: #212529;
+		border-radius: 5px;
+		width: 50%;
+		padding: 20px;
+		bottom: 20px
+	}
+
+	// mobile
+	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+		width: 90%;
+
+		.close { top: 20px; }
+
+		.modal-image-wrapper {
+			margin: -20px;
+			height: 450px;
+		}
+
+		.content {
+			margin: -20px;
+			width: 120%;
+			padding: 20px;
+			border-radius: 0px;
+		}
+	}
+}

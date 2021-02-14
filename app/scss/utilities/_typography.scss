@@ -24,18 +24,26 @@ a {
     text-decoration: none;
 
     &.dark {
-    	color: #222222;
+    	color: #212529;
 
     	&:hover {
-    		color: #666666;
+    		color: #343A40;
     	}
     }
 
     &.light {
-        color: #e7e7e7;
+        color: #ADB5BD;
 
         &:hover {
-            color: #cccccc;
+            color: #CED4DA;
+        }
+    }
+
+    &.white {
+        color: #FFFFF0;
+
+        &:hover {
+            color: #FFFFF0;
         }
     }
 
@@ -44,16 +52,39 @@ a {
     &.padding { padding: 7px 14px 8px 14px; }
 }
 
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding: 7px 14px 8px 14px;
+    border-radius: 5px;
+    background-color: #212529;
+    border: 1px solid #212529;
+    color: #FFFFF0;
+
+    &:hover {
+        background-color: #343a40;
+        border: 1px solid #343a40;
+    }
+
+    &.expand { width: 100%; }
+
+    &.light {
+        background-color: #6c757d;
+        border: 1px solid #6c757d;
+        color: #FFFFF0;
+    }
+}
+
 .uppercase { text-transform: uppercase; }
 
 .material-icons {
 	font-size: 1em;
-	color: #222222;
+	color: #212529;
 
     &.small {
         font-size: 1.1em;
         vertical-align: middle;
     }
 
-    &.light { color: #e7e7e7; }
+    &.light { color: #CED4DA; }
 }

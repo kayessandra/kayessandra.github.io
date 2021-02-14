@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<title>PAINTSHOP</title>
+
+		<link rel="stylesheet" href="app/css/main-style.css">
+		<link rel="stylesheet" href="app/css/pages/item-page.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	</head>
+
+	<body id="item">
+		<header id="site-header"></header>
+
+		<section class="page-content">
+			<div class="grid">
+				<div class="item-photo-wrapper">
+					<img src="app/images/paints/kismet-hero.jpg" alt="">
+				</div>
+
+				<div class="mobile-order relative">
+					<button class="get-sample bottomsheet-trigger">Get Sample</button>
+					<button class="add-to-cart bottomsheet-trigger">Add To Cart</button>
+				</div>
+
+				<div class="item-details">
+					<h3 class="bold uppercase">Kismet</h3>
+					<p>Dark dutch green</p>
+
+					<div class="prices grid gap padding-top-20">
+						<p>Gallon <strong>P2,800</strong></p>
+						<p>Sample <strong>P150</strong></p>
+					</div>
+
+					<hr>
+
+					<p>Clean, crisp, cool blue with a hint of gray. Our version of baby blue.</p>
+
+					<div class="prices grid gap padding-top-20">
+						<p class="padding-left-10 uppercase">- Low Odor</p>
+						<p class="padding-left-10 uppercase">- Low VOC</p>
+						<p class="padding-left-10 uppercase">- Green certified</p>
+						<p class="padding-left-10 uppercase">- Easy Wash</p>
+						<p class="padding-left-10 uppercase">- Applies Easily</p>
+					</div>
+
+					<div class="oder-item">
+
+					<hr>
+						<form action="" class="grid gap">
+							<fieldset>
+								<label for="paint-type">Paint Type</label>
+								<select name="paint-type" id="">
+									<option value="0">Select</option>
+									<option value="1">Semi-Gloss</option>
+									<option value="2">Standard</option>
+								</select>
+							</fieldset>
+
+							<fieldset>
+								<label for="paint-type">Quantity</label>
+								<select name="paint-type" id="">
+									<option value="0">1</option>
+									<option value="1">2</option>
+									<option value="2">3</option>
+								</select>
+							</fieldset>
+						</form>
+
+						<button>Get Sample</button>
+						<button>Add To Cart</button>
+					</div>
+
+					<hr>
+
+					<div class="similar-colors relative">
+						<h3 class="bold uppercase">Similar Colors</h3>
+
+						<div class="grid absolute">
+							<div class="relative">
+								<img src="app/images/paints/lawn-party-hero.jpg" alt="">
+								<a href="" class="white"><h5 class="small bold uppercase absolute">Lawn Party</h5></a>
+							</div>
+							<div class="relative">
+								<img src="app/images/paints/weekend-upstate-hero.jpg" alt="">
+								<a href="" class="white"><h5 class="small bold uppercase absolute">Weekend Upstate</h5></a>
+							</div>
+							<div class="relative">
+								<img src="app/images/paints/saturday-on-sunday-hero.jpg" alt="">
+								<a href="" class="white"><h5 class="small bold uppercase absolute">Saturday on Sunday</h5></a>
+							</div>
+							<div class="relative">
+								<img src="app/images/paints/surf-camp-hero.jpg" alt="">
+								<a href="" class="white"><h5 class="small bold uppercase absolute">Surf Camp</h5></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- mobile bottomsheet -->
+		<section class="bottomsheet filter fixed">
+			<div class="flex item-center space-between">
+				<h5 class="bold uppercase">Get A Sample</h5>
+
+				<a href="" class="light close"><span class="material-icons light">close</span></a>
+			</div>
+
+			<hr>
+
+			<form action="" class="padding-top-20 padding-bottom-20">
+				<h5 class="bold uppercase">Kismet</h5>
+				<p>Dark dutch green</p>
+
+				<fieldset class="margin-top-20">
+					<label for="paint-type">Paint Type</label>
+					<select name="paint-type" id="">
+						<option value="0">Select</option>
+						<option value="1">Semi-Gloss</option>
+						<option value="2">Standard</option>
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<label for="paint-type">Quantity</label>
+					<select name="paint-type" id="">
+						<option value="0">1</option>
+						<option value="1">2</option>
+						<option value="2">3</option>
+					</select>
+				</fieldset>
+			</form>
+
+			<hr>
+
+			<button class="expand light margin-top-10">Add To Cart</button>
+		</section>
+		<div class="backdrop fixed hide"></div>
+
+		<footer id="site-footer" class="flex item-center space-between"></footer>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="app/js/jquery-include.js"></script>
+</html>

@@ -1,3 +1,52 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: #FFFFF0;
+  color: #343A40;
+  font-family: "Roboto", sans-serif;
+  min-width: 1000px;
+}
+body img {
+  max-width: 100%;
+}
+body .bottomsheet {
+  display: none;
+}
+body .backdrop {
+  display: block;
+  background-color: #000000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 5;
+}
+body .backdrop.hide {
+  display: none;
+}
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  body {
+    min-width: 100px;
+  }
+  body .bottomsheet {
+    display: block;
+  }
+}
+
 h1, h2, h3, h4, h5 {
   font-weight: 700;
   line-height: 1.2em;
@@ -41,16 +90,22 @@ a {
   text-decoration: none;
 }
 a.dark {
-  color: #222222;
+  color: #212529;
 }
 a.dark:hover {
-  color: #666666;
+  color: #343A40;
 }
 a.light {
-  color: #e7e7e7;
+  color: #ADB5BD;
 }
 a.light:hover {
-  color: #cccccc;
+  color: #CED4DA;
+}
+a.white {
+  color: #FFFFF0;
+}
+a.white:hover {
+  color: #FFFFF0;
 }
 a.underline {
   text-decoration: underline;
@@ -59,20 +114,42 @@ a.padding {
   padding: 7px 14px 8px 14px;
 }
 
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  padding: 7px 14px 8px 14px;
+  border-radius: 5px;
+  background-color: #212529;
+  border: 1px solid #212529;
+  color: #FFFFF0;
+}
+button:hover {
+  background-color: #343a40;
+  border: 1px solid #343a40;
+}
+button.expand {
+  width: 100%;
+}
+button.light {
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+  color: #FFFFF0;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
 
 .material-icons {
   font-size: 1em;
-  color: #222222;
+  color: #212529;
 }
 .material-icons.small {
   font-size: 1.1em;
   vertical-align: middle;
 }
 .material-icons.light {
-  color: #e7e7e7;
+  color: #CED4DA;
 }
 
 .flex {
@@ -203,7 +280,34 @@ a.padding {
 hr {
   border-width: 1px 0px 0px 0px;
   border-style: dashed;
-  border-color: #666666;
+  border-color: #495057;
+}
+
+form fieldset {
+  border: none;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+form fieldset label {
+  font-size: 0.8em;
+  line-height: 2em;
+}
+form fieldset select, form fieldset input {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: transparent;
+  font-size: 1em;
+  border-color: #495057;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+form fieldset select {
+  background-image: url("app/images/dropdown-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #site-header {
@@ -215,8 +319,8 @@ hr {
   display: none;
 }
 #site-header .main-nav {
-  border-bottom: 1px dashed #666666;
-  background-color: ivory;
+  border-bottom: 1px dashed #495057;
+  background-color: #FFFFF0;
   padding: 30px 50px;
   z-index: 3;
 }
@@ -233,6 +337,9 @@ hr {
   padding: 0px 20px;
 }
 @media only screen and (min-width: 300px) and (max-width: 700px) {
+  #site-header {
+    z-index: 3;
+  }
   #site-header .main-nav {
     padding: 25px 20px;
     position: relative;
@@ -246,10 +353,11 @@ hr {
     left: 0px;
     top: -150px;
     transition: all 0.5s;
-    background-color: ivory;
+    background-color: #FFFFF0;
     text-align: center;
     padding: 10px 0px 10px 0px;
     z-index: 2;
+    border-bottom: 1px dashed #495057;
   }
   #site-header .nav-link a {
     display: block;
@@ -261,7 +369,7 @@ hr {
 }
 
 #site-footer {
-  border-top: 1px dashed #666666;
+  border-top: 1px dashed #495057;
   padding: 30px 50px;
 }
 #site-footer .links a {
@@ -280,14 +388,14 @@ hr {
 }
 
 .bottomsheet {
-  background-color: #222222;
-  color: #e7e7e7;
+  background-color: #212529;
+  color: #CED4DA;
   padding: 20px;
   border-radius: 10px 10px 0px 0px;
   width: 100%;
   bottom: -800px;
   transition: all 0.6s;
-  z-index: 2;
+  z-index: 6;
 }
 .bottomsheet.open {
   bottom: 0px;
@@ -305,16 +413,80 @@ hr {
   display: none;
 }
 .bottomsheet > div .chip.active {
-  background-color: #111111;
+  background-color: #343a40;
 }
 .bottomsheet > div .chip.active a:last-of-type {
   display: inline-block;
 }
+.bottomsheet > form select {
+  color: #FFFFF0;
+}
 
-.paint-card .image-wrapper {
+.modal {
+  background-color: #212529;
+  color: #CED4DA;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  z-index: 6;
+  display: none;
+}
+.modal.open {
+  display: block;
+}
+.modal .close {
+  top: 15px;
+  right: 5px;
+}
+.modal .modal-image-wrapper {
+  margin: -20px;
+  height: 600px;
+}
+.modal .content {
+  background-color: #FFFFF0;
+  color: #212529;
+  border-radius: 5px;
+  width: 50%;
+  padding: 20px;
+  bottom: 20px;
+}
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  .modal {
+    width: 90%;
+  }
+  .modal .close {
+    top: 20px;
+  }
+  .modal .modal-image-wrapper {
+    margin: -20px;
+    height: 450px;
+  }
+  .modal .content {
+    margin: -20px;
+    width: 120%;
+    padding: 20px;
+    border-radius: 0px;
+  }
+}
+
+.paint-card .image-wrapper, .mood-card .image-wrapper {
   border-radius: 5px;
   overflow: hidden;
   width: 100%;
+}
+.paint-card .image-wrapper img, .mood-card .image-wrapper img {
+  display: block;
+}
+.paint-card p:last-of-type, .mood-card p:last-of-type {
+  padding-top: 5px;
+}
+
+.paint-card .image-wrapper {
   height: 100px;
 }
 @media only screen and (min-width: 300px) and (max-width: 700px) {
@@ -323,48 +495,11 @@ hr {
   }
 }
 
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  font-size: 16px;
-  background-color: ivory;
-  font-family: "Roboto", sans-serif;
-  min-width: 1000px;
-}
-body img {
-  max-width: 100%;
-}
-body .bottomsheet {
-  display: none;
-}
-body .backdrop {
-  background-color: #000000;
-  opacity: 0.8;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-}
-body .backdrop.hide {
-  display: none;
+.mood-card .image-wrapper {
+  height: 200px;
 }
 @media only screen and (min-width: 300px) and (max-width: 700px) {
-  body {
-    min-width: 100px;
-  }
-  body .bottomsheet {
-    display: block;
+  .mood-card .image-wrapper {
+    height: 150px;
   }
 }

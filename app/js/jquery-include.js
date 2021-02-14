@@ -59,3 +59,37 @@ bottomSheetClose.on('click', function(e) {
 	bottomSheet.removeClass('open');
 	backDrop.addClass('hide');
 });
+
+backDrop.on('click', function(e){
+	e.preventDefault();
+
+	bottomSheet.removeClass('open');
+	backDrop.addClass('hide');
+});
+
+// modal 
+
+var modalTrigger = $('.modal-trigger');
+var modal = $('.modal');
+var modalClose = $('.modal').find('.close');
+
+modalTrigger.on('click', function(e) {
+	e.preventDefault();
+
+	modal.addClass('open');
+	backDrop.removeClass('hide');
+});
+
+modalClose.on('click', function(e) {
+	e.preventDefault();
+
+	modal.removeClass('open');
+	backDrop.addClass('hide');
+});
+
+backDrop.on('click', function(e){
+	e.preventDefault();
+
+	modal.removeClass('open');
+	backDrop.addClass('hide');
+});
