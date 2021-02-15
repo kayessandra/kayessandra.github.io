@@ -136,6 +136,17 @@ button.light, .button.light {
   color: #FFFFF0;
 }
 
+.breadcrumb {
+  font-size: 12px;
+}
+.breadcrumb a {
+  color: #212529;
+  padding-right: 10px;
+}
+.breadcrumb a.active {
+  color: #495057;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

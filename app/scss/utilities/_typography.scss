@@ -75,6 +75,19 @@ button, .button {
     }
 }
 
+.breadcrumb {
+    font-size: 12px;
+
+    a {
+        color: #212529;
+        padding-right: 10px;
+
+        &.active {
+            color: #495057;
+        }
+    }
+}
+
 .uppercase { text-transform: uppercase; }
 
 .material-icons {
