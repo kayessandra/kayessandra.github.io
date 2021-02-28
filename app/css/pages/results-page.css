@@ -40,7 +40,7 @@
 #results .page-content .items > div a {
   display: none;
 }
-@media only screen and (min-width: 300px) and (max-width: 700px) {
+@media only screen and (min-width: 300px) and (max-width: 900px) {
   #results .page-content {
     padding: 30px 20px;
   }

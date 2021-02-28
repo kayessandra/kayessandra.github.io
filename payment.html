@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<title>PAINTSHOP</title>
+
+		<link rel="stylesheet" href="app/css/main-style.css">
+		<link rel="stylesheet" href="app/css/pages/cart-page.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	</head>
+
+	<body id="cart">
+		<header id="site-header"></header>
+
+		<section class="page-content">
+			<h2 class="bold uppercase">Your Orders</h2>
+			<div class="breadcrumb flex item-center margin-top-10">
+				<a href="cart.html" class="dark active">Information   /</a>
+				<a href="payment.html" class="dark">Payment</a>
+			</div>
+
+			<div class="grid gap margin-top-20">
+				<div class="information padding-top-20">
+					<h4 class="bold uppercase">Shipping Address</h4>
+
+					<section class="margin-top-5">
+						<div class="flex item-center">
+							<p class="padding-right-20">Contact</p>
+							<p>kaye@autodeal.com.ph</p>
+						</div>
+						<div class="flex item-center">
+							<p class="padding-right-20">Ship To</p>
+							<p>123 La Verti Towers Taft Ave Pasay City</p>
+						</div>
+					</section>
+
+					<h4 class="bold uppercase margin-top-20 padding-top-20">Payment</h4>
+					<p class="small">All transactions are secure and encrypted.</p>
+
+					<section class="margin-top-5">
+						<div class="flex item-center">
+							<form action="">
+								<fieldset class="no-margin">
+									<input class="chk" name="chk" id="card" type="checkbox">
+		                            <label for="email"></label>
+								</fieldset>
+							</form>
+							<p class="padding-right-20"></p>
+							<p>Credit Card</p>
+						</div>
+						<form action="">
+							<fieldset>
+								<label for="card">Card Number</label>
+								<input type="text" placeholder="Type Here">
+							</fieldset>
+
+							<fieldset>
+								<label for="card">Name on Card</label>
+								<input type="text" placeholder="Type Here">
+							</fieldset>
+
+							<fieldset class="grid gap">
+								<div>
+									<label for="first-name">Expiration Date (MM/YY)</label>
+									<input type="text" placeholder="Type Here">
+								</div>
+
+								<div>
+									<label for="last-name">Security Code</label>
+									<input type="text" placeholder="Type Here">
+								</div>
+							</fieldset>
+						</form>
+
+						<div class="flex item-center">
+							<form action="">
+								<fieldset class="no-margin">
+									<input class="chk" name="chk" id="card" type="checkbox">
+		                            <label for="email"></label>
+								</fieldset>
+							</form>
+							<p class="padding-right-20"></p>
+							<p>Cash On Delivery</p>
+						</div>
+					</section>
+
+					<h4 class="bold uppercase margin-top-20 padding-top-20">Billing Address</h4>
+					<p class="small">Select the address that matches your card or payment method.</p>
+
+					<section class="margin-top-5">
+						<div class="flex item-center">
+							<form action="">
+								<fieldset class="no-margin">
+									<input class="chk" name="chk" id="card" type="checkbox">
+		                            <label for="email"></label>
+								</fieldset>
+							</form>
+							<p class="padding-right-20"></p>
+							<p>Billing Address</p>
+						</div>
+						<form action="">
+							<fieldset class="grid gap">
+								<div>
+									<label for="first-name">First Name</label>
+									<input type="text" placeholder="Type Here">
+								</div>
+
+								<div>
+									<label for="last-name">Last Name</label>
+									<input type="text" placeholder="Type Here">
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<label for="address">Address</label>
+								<input type="text" placeholder="Type Here">
+							</fieldset>
+
+							<fieldset class="grid gap">
+								<div>
+									<label for="city">City</label>
+									<input type="text" placeholder="Type Here">
+								</div>
+
+								<div>
+									<label for="zip">ZIP Code</label>
+									<input type="text" placeholder="Type Here">
+								</div>
+							</fieldset>
+
+							<fieldset class="grid gap">
+								<div>
+									<label for="phone">Phone</label>
+									<input type="text" placeholder="Type Here">
+								</div>
+							</fieldset>
+						</form>
+
+						<div class="flex item-center">
+							<form action="">
+								<fieldset class="no-margin">
+									<input class="chk" name="chk" id="card" type="checkbox">
+		                            <label for="email"></label>
+								</fieldset>
+							</form>
+							<p class="padding-right-20"></p>
+							<p>Shipping Address</p>
+						</div>
+					</section>
+
+					<div id="ctas" class="flex space-between item-center padding-top-20">
+						<a href="cart.html" class="dark flex"><span class="material-icons small padding-right-5">arrow_back</span> Back To Informtaion</a>
+						<button href="" class="dark">Pay Now</button>
+					</div>
+				</div>
+
+				<div class="items padding-top-20">
+					<div class="samplers margin-bottom-20">
+						<h4 class="bold uppercase">Samplers</h4>
+
+						<div id="cart-item" class="grid gap padding-top-20">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/kismet-hero.jpg" alt="">
+							</div>
+
+							<div class="relative">
+								<p class="bold uppercase">1 Kismet</p>
+								<p class="small">Dark dutch green</p>
+								<p class="small">Semi-Gloss</p>
+
+								<div class="item-counter absolute flex item-center">
+									<a href=""><span class="material-icons">remove</span></a>
+									<span class="bold">1</span>
+									<a href=""><span class="material-icons">add</span></a>
+								</div>
+							</div>
+							
+							<div class="relative">
+								<p class="bold uppercase text-right">P150</p>
+
+								<div class="item-remover absolute flex item-center">
+									<a href=""><span class="material-icons">delete</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="paints padding-top-20 padding-bottom-20">
+						<h4 class="bold uppercase">Paints</h4>
+
+						<div id="cart-item" class="grid gap padding-top-20">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/kismet-hero.jpg" alt="">
+							</div>
+
+							<div class="relative">
+								<p class="bold uppercase">1 Kismet</p>
+								<p class="small">Dark dutch green</p>
+								<p class="small">Semi-Gloss</p>
+
+								<div class="item-counter absolute flex item-center">
+									<a href=""><span class="material-icons">remove</span></a>
+									<span class="bold">1</span>
+									<a href=""><span class="material-icons">add</span></a>
+								</div>
+							</div>
+							
+							<div class="relative">
+								<p class="bold uppercase text-right">P2,800</p>
+
+								<div class="item-remover absolute flex item-center">
+									<a href=""><span class="material-icons">delete</span></a>
+								</div>
+							</div>
+						</div>
+
+						<div id="cart-item" class="grid gap padding-top-20">
+							<div class="image-wrapper margin-bottom-10">
+								<img src="app/images/paints/kismet-hero.jpg" alt="">
+							</div>
+
+							<div class="relative">
+								<p class="bold uppercase">1 Kismet</p>
+								<p class="small">Dark dutch green</p>
+								<p class="small">Semi-Gloss</p>
+
+								<div class="item-counter absolute flex item-center">
+									<a href=""><span class="material-icons">remove</span></a>
+									<span class="bold">1</span>
+									<a href=""><span class="material-icons">add</span></a>
+								</div>
+							</div>
+							
+							<div class="relative">
+								<p class="bold uppercase text-right">P2,800</p>
+
+								<div class="item-remover absolute flex item-center">
+									<a href=""><span class="material-icons">delete</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr class="solid">
+
+					<div class="flex space-between item-center padding-top-10 padding-bottom-10">
+						<p>Sub Total</p>
+						<p class="bold">P5,750</p>
+					</div>
+
+					<div class="flex space-between item-center padding-top-10 padding-bottom-10">
+						<p>Shipping</p>
+						<p class="bold">P50</p>
+					</div>
+
+					<hr class="solid">
+
+					<div class="flex space-between item-center padding-top-10 padding-bottom-10">
+						<p>Total</p>
+						<p class="bold">P5,800</p>
+					</div>
+
+					<div id="ctas" class="flex space-between item-center padding-top-20">
+						<a href="cart.html" class="dark flex"><span class="material-icons small padding-right-5">arrow_back</span> Back To Informtaion</a>
+						<button href="" class="dark">Pay Now</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="site-footer" class="flex item-center space-between"></footer>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="app/js/jquery-include.js"></script>
+</html>

@@ -4,80 +4,98 @@
 	.page-content {
 		padding: 50px;
 
-		> div {
-			grid-template-columns: 300px 3fr;
-			margin-top: 50px;
+		> .grid {
+			grid-template-columns: 2fr 1fr;
+			margin-top: 10px;
+			margin-bottom: 100px;
 		}
 
-		.filter {
+		.information {
+			padding-right: 50px;
+
 			hr { margin-top: 30px; }
 
 			> div {
 				grid-template-columns: 1fr 1fr;
 				grid-gap: 20px 10px;
-
-			    .chip {
-			        padding: 5px 10px 6px 10px;
-			        border-radius: 5px;
-			        display: inline-block;
-
-			        a:last-of-type { display: none; }
-
-			        &.active {
-			        	background-color: #f1f1f1;
-
-			        	a:last-of-type { display: inline-block; }
-			        }
-			    }
 			}
+
+		    fieldset { grid-template-columns: 1fr 1fr; }
+
+		    > section {
+		    	border: 1px solid #ADB5BD;
+		    	border-radius: 5px;
+
+		    	> div {
+			    	padding: 10px;
+
+		    		&:first-of-type { border-bottom: 1px solid #ADB5BD; }
+
+		    		p:first-of-type { color: #6C757D; }
+		    	}
+
+		    	> form {
+		    		padding: 10px;
+		    		background-color: #E7E7E7;
+		    		border-bottom: 1px solid #ADB5BD;
+
+		    		input { background-color: #FFFFFF; }
+		    	}
+		    }
 		}
 
 		.items {
-			.item-wrapper {
-				grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
-				grid-gap: 40px 20px;
-				margin-top: 30px;
+			#cart-item {
+				grid-template-columns: 60px 1fr 1fr;
+
+				.image-wrapper {
+					width: 60px;
+					height: 100px;
+					background-color: #e7e7e7;
+					border-radius: 5px;
+					overflow: hidden;
+				}
+
+				.item-counter {
+					gap: 15px;
+					bottom: -20px;
+				}
+
+				.item-remover {
+					gap: 15px;
+					bottom: -50px;
+					right: -180px;
+				}
 			}
 
-			> p:last-of-type {
-				color: #ADB5BD;
-				margin-top: 50px;
-				margin-bottom: 30px;
-				text-align: center;
-			}
-
-			> div a { display: none; }
+			#ctas { display: none; }
 		}
 	}
 
 	// mobile
-	@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+	@media only screen and (min-width: 300px ) and (max-width: 900px ) {
 		.page-content {
 			padding: 30px 20px;
 
-			> div {
+			> .grid {
 				grid-template-columns: 1fr;
 				margin-top: 10px;
+				margin-bottom: 0px;
 			}
 
-			.filter { display: none; }
+			.information {
+				padding-right: 0px;
+				#ctas { display: none; }
+			}
 
 			.items {
-				.item-wrapper {
-					grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-					grid-gap: 30px 10px;
-					margin-top: 10px;
+				#cart-item {
+					.item-remover { right: -100px; }
 				}
 
-				> div {
-					position: sticky;
-					top: 79px;
-					background-color: #FFFFF0;
-					padding: 10px 20px;
-					margin: 0px -20px;
-					z-index: 1;
-
-					a { display: inline-block; }
+				#ctas {
+					margin-top: 20px;
+					display: flex;
 				}
 			}
 		}

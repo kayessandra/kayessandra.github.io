@@ -6,7 +6,7 @@
 #faqs .page-content > div {
   margin-bottom: 60px;
 }
-@media only screen and (min-width: 300px) and (max-width: 700px) {
+@media only screen and (min-width: 300px) and (max-width: 900px) {
   #product .page-content,
 #faqs .page-content {
     padding: 30px 20px;
