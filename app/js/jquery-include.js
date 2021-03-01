@@ -96,15 +96,23 @@ backDrop.on('click', function(e){
 
 // alert
 
-var getSample = $('.get-sample');
-var addToCart = $('.add-to-cart');
-var alert = $('#site-header').find('.alert');
+var getSample = $('.get-sample-alert');
+var addToCart = $('.add-to-cart-alert');
+var alert = $('.alert');
 
 addToCart.on('click', function(e) {
 	e.preventDefault();
 
-	$('#site-header').load('app/sections/site-header.html');
-
 	alert.addClass('active');
-	console.log('asd')
+
+	alert.delay(900).fadeTo('fast', 0, function() {
+        setTimeout(function(){
+            alert.css({'opacity':'1'});
+        }, 800);
+        setTimeout(function(){
+            alert.removeClass('active');
+        }, 600);
+    });
+
+    console.log('asdasd')
 });

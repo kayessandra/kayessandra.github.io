@@ -27,18 +27,21 @@ body .bottomsheet {
   display: none;
 }
 body .alert {
-  background-color: #FFFFF0;
+  background-color: #212529;
+  color: #FFFFF0;
   padding: 10px;
   width: 300px;
-  top: 10px;
+  top: -50px;
   left: 0;
   right: 0;
   margin: 0 auto;
   text-align: center;
   border-radius: 10px;
+  transition: all 0.5s;
+  z-index: 6;
 }
 body .alert.active {
-  top: 85px;
+  top: 10px;
 }
 @media only screen and (min-width: 300px) and (max-width: 900px) {
   body {
