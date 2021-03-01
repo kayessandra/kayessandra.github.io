@@ -26,6 +26,20 @@ body img {
 body .bottomsheet {
   display: none;
 }
+body .alert {
+  background-color: #FFFFF0;
+  padding: 10px;
+  width: 300px;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+}
+body .alert.active {
+  top: 85px;
+}
 @media only screen and (min-width: 300px) and (max-width: 900px) {
   body {
     min-width: 100px;
@@ -87,6 +101,9 @@ p.bold {
 }
 p.text-right {
   text-align: right;
+}
+p.text-center {
+  text-align: center;
 }
 
 a {
@@ -361,6 +378,7 @@ form fieldset input[type=checkbox]:checked {
   background-color: #FFFFF0;
   padding: 30px 50px;
   z-index: 3;
+  position: relative;
 }
 #site-header .main-nav img {
   width: 105px;
@@ -370,6 +388,7 @@ form fieldset input[type=checkbox]:checked {
   right: 100px;
   top: 35px;
   text-align: right;
+  z-index: 3;
 }
 #site-header .nav-link a {
   padding: 0px 20px;

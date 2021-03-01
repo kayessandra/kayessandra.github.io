@@ -93,3 +93,18 @@ backDrop.on('click', function(e){
 	modal.removeClass('open');
 	backDrop.addClass('hide');
 });
+
+// alert
+
+var getSample = $('.get-sample');
+var addToCart = $('.add-to-cart');
+var alert = $('#site-header').find('.alert');
+
+addToCart.on('click', function(e) {
+	e.preventDefault();
+
+	$('#site-header').load('app/sections/site-header.html');
+
+	alert.addClass('active');
+	console.log('asd')
+});
