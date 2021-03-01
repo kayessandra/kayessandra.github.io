@@ -63,3 +63,47 @@ hr {
 		border-style: solid;
 	}
 }
+
+
+// dropdown
+
+.dropdown {
+	.dropdown-content { display: none; }
+
+	&:hover .dropdown-content {
+		position: absolute;
+		display: block;
+		width: 400px;
+		// top: 40px;
+		right: -20px;
+		background-color: #212529;
+		color: #FFFFF0;
+		padding: 20px;
+		border-radius: 10px;
+		display: hidden;
+
+		#cart-item {
+			grid-template-columns: 60px 1fr 1fr;
+
+			.image-wrapper {
+				width: 60px;
+				height: 100px;
+				background-color: transparent;
+				border-radius: 5px;
+				overflow: hidden;
+			}
+
+			.item-counter {
+				gap: 15px;
+				bottom: -20px;
+			}
+
+			.item-remover {
+				gap: 15px;
+				bottom: -50px;
+				right: 0px;
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}

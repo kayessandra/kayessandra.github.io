@@ -63,6 +63,9 @@ body .alert.active {
   body .backdrop.hide {
     display: none;
   }
+  body .dropdown-content {
+    opacity: 0;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -146,6 +149,7 @@ button, .button {
   background-color: #212529;
   border: 1px solid #212529;
   color: #FFFFF0;
+  cursor: pointer;
 }
 button:hover, .button:hover {
   background-color: #343a40;
@@ -325,6 +329,41 @@ hr.solid {
   border-style: solid;
 }
 
+.dropdown .dropdown-content {
+  display: none;
+}
+.dropdown:hover .dropdown-content {
+  position: absolute;
+  display: block;
+  width: 400px;
+  right: -20px;
+  background-color: #212529;
+  color: #FFFFF0;
+  padding: 20px;
+  border-radius: 10px;
+  display: hidden;
+}
+.dropdown:hover .dropdown-content #cart-item {
+  grid-template-columns: 60px 1fr 1fr;
+}
+.dropdown:hover .dropdown-content #cart-item .image-wrapper {
+  width: 60px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dropdown:hover .dropdown-content #cart-item .item-counter {
+  gap: 15px;
+  bottom: -20px;
+}
+.dropdown:hover .dropdown-content #cart-item .item-remover {
+  gap: 15px;
+  bottom: -50px;
+  right: 0px;
+  flex-direction: row-reverse;
+}
+
 form fieldset {
   border: none;
   margin: 0px 0px 10px 0px;
@@ -405,6 +444,9 @@ form fieldset input[type=checkbox]:checked {
     position: relative;
   }
   #site-header .menu-icon {
+    display: inline-block;
+  }
+  #site-header .cart-icon {
     display: inline-block;
   }
   #site-header .nav-link {

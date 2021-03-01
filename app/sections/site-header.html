@@ -3,7 +3,42 @@
 <section class="main-nav flex space-between item-center">
 	<a href="index.html" class="dark"><img src="app/images/black-logo.png" alt=""></a>
 	<div>
-		<a href="cart.html" class="dark padding-left-10 cart-icon"><span class="material-icons">shopping_cart</span></a>
+		<div class="dropdown relative cart-icon">
+			<a href="cart.html" class="dark padding-left-10"><span class="material-icons">shopping_cart</span></a>
+
+			<div class="dropdown-content">
+				<h5 class="bold uppercase">Samplers</h5>
+
+				<div id="cart-item" class="grid gap padding-top-20">
+					<div class="image-wrapper margin-bottom-10">
+						<img src="app/images/paints/kismet-hero-cart.svg" alt="">
+					</div>
+
+					<div class="">
+						<p class="bold uppercase">1 Kismet</p>
+						<p class="small">Dark dutch green</p>
+						<p class="small">Semi-Gloss</p>
+
+						<div class="item-counter relative flex item-center">
+							<a href=""><span class="light material-icons">remove</span></a>
+							<span class="bold">1</span>
+							<a href=""><span class="light material-icons">add</span></a>
+						</div>
+					</div>
+					
+					<div class="">
+						<p class="bold uppercase text-right">P2,800</p>
+
+						<div class="item-remover relative flex item-center">
+							<a href=""><span class="light material-icons">delete</span></a>
+						</div>
+					</div>
+				</div>
+
+				<a href="cart.html"><button class="light expand margin-top-20">Checkout</button></a>
+			</div>
+		</div>
+
 		<a href="" class="dark padding-left-10 menu-icon"><span class="material-icons">menu</span></a>
 	</div>
 </section>
